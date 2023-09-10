@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Your E-commerce Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Your E-commerce Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Section</title>
+    <style>
+        #comments {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #comments li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        #comment-form {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<>
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "100151132265215");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v17.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Your Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="abhi.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Rest of your website content goes here -->
+    <header>
+        <!-- Header content as previously defined -->
+    </header>
+
+    <section class="feature-categories">
+        <h2>Our Available Courses</h2>
+        <div class="category">
+            <img src="abhi.jpg" alt="Category 1">
+            <h3>অভি ভাইয়ের কোর্সসমূহ  </h3>
+            <p>A popular math course platform trusted by Bangladeshi HSC students for comprehensive math education.
+               <a href="abhi.html"> <h1><b>  <button class="price-button">Visit</button> </b></h1></a>
+
+                
+                </p>
+        </div>
+        <div class="category">
+            <img src="apar.jpg" alt="Category 2">
+            <h3>অপার ভাইয়ের কোর্সসমূহ 
+            </h3>
+            <p>A popular Physics course platform trusted by Bangladeshi HSC students for comprehensive math education.
+               <a href="apar.html"> <h1><b>  <button class="price-button">Visit</button> </b></h1></a>
+            </p>
+        </div>
+        <div class="category">
+            <img src="25 c1.jpg" alt="Category 3">
+            <h3>Higher Math 1st Paper Cycle 1 (HSC 2025)</h3>
+            <p>কোর্স এনরোল করতে ভিজিট করোঃ https://aparsclassroom.com/shop/abhi/Math25/Cycle-1/
+               <h1><b>  <button class="price-button">৳1000</button> </b></h1>
+            </p>
+        </div>
+    </section>
+    <!----------------------- 2nd Section-------- --------->
+    <section class="feature-categories">
+        <h2>Our Poupular Books </h2>
+        <div class="category">
+            <img src="ssc.jpg" alt="Category 1">
+            <h3>অভি ভাইয়ের কোর্সসমূহ  </h3>
+            <p>A popular math course platform trusted by Bangladeshi HSC students for comprehensive math education.
+               <a href="abhi.html"> <h1><b>  <button class="price-button">Visit</button> </b></h1></a>
+
+                
+                </p>
+        </div>
+        <div class="category">
+            <img src="apar.jpg" alt="Category 2">
+            <h3>অপার ভাইয়ের কোর্সসমূহ 
+            </h3>
+            <p>A popular Physics course platform trusted by Bangladeshi HSC students for comprehensive math education.
+               <a href="apar.html"> <h1><b>  <button class="price-button">Visit</button> </b></h1></a>
+            </p>
+        </div>
+        <div class="category">
+            <img src="25 c1.jpg" alt="Category 3">
+            <h3>Higher Math 1st Paper Cycle 1 (HSC 2025)</h3>
+            <p>কোর্স এনরোল করতে ভিজিট করোঃ https://aparsclassroom.com/shop/abhi/Math25/Cycle-1/
+               <h1><b>  <button class="price-button">৳1000</button> </b></h1>
+            </p>
+        </div>
+    </section>
+   
+
+    <!-- Rest of your website content goes here -->
+    <h1>Comment Section</h1>
+    <ul id="comments">
+        <!-- Existing comments will appear here -->
+    </ul>
+
+    <form id="comment-form">
+        <label for="comment">Leave a Comment:</label>
+        <textarea id="comment" rows="4" cols="50"></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // Function to handle form submission
+        document.getElementById("comment-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            // Get the user's comment
+            var commentText = document.getElementById("comment").value;
+
+            // Create a new list item for the comment
+            var commentItem = document.createElement("li");
+            commentItem.textContent = commentText;
+
+            // Append the comment to the list
+            document.getElementById("comments").appendChild(commentItem);
+
+            // Clear the textarea
+            document.getElementById("comment").value = "";
+        });
+    </script>
+    <!-- Dropdown-->
+    
+    
+</body>
+</html>
